@@ -13,20 +13,23 @@ font-family:Arial, sans-serif;
 body{
 background:
 radial-gradient(circle at top,
-#181818 0%,
-#080808 40%,
-#000000 100%);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+rgba(255,255,255,.04),
+transparent 40%),
+#050505;
 }
+
 
 .container{
 width:90%;
 max-width:500px;
 text-align:center;
+}
+.avatar{
+width:90px;
+height:90px;
+border-radius:50%;
+margin-bottom:20px;
+border:2px solid rgba(255,255,255,.15);
 }
 
 .brand-logo{
@@ -49,14 +52,24 @@ letter-spacing:1px;
 display:block;
 text-decoration:none;
 color:white;
-background:rgba(20,20,20,.9);
-border:1px solid #2f2f2f;
+
+background:
+rgba(255,255,255,.03);
+
+backdrop-filter:blur(10px);
+
+border:1px solid
+rgba(255,255,255,.08);
+
 padding:18px;
+
 margin:14px 0;
+
 border-radius:18px;
+
+font-weight:700;
+
 transition:.3s;
-font-weight:600;
-backdrop-filter:blur(8px);
 }
 
 .btn:hover{
@@ -86,6 +99,21 @@ transform:translateY(0);
 
 .container{
 animation:fadeIn 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+animation:fadeUp 1.2s ease;
 }
 
 </style></head><body><div class="container"><img src="file_00000000d5a071fbbba457f52dc33af1.png" class="brand-logo" alt="Demure Logo"><div class="tagline">
