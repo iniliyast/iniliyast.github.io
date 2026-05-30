@@ -1,5 +1,8 @@
 <!DOCTYPE html><html lang="en">
 <head>
+<link rel="icon"
+type="image/png"
+href="file_00000000d5a071fbbba457f52dc33af1.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Demure</title><style>
 
@@ -16,17 +19,10 @@ radial-gradient(circle at top,
 rgba(255,255,255,.04),
 transparent 40%),
 #050505;
-
+display:flex;
+justify-content:center;
+align-items:center;
 min-height:100vh;
-padding-top:15px;
-padding-bottom:40px;
-}
-
-.container{
-width:90%;
-max-width:500px;
-margin:0 auto;
-text-align:center;
 }
 
 
@@ -48,11 +44,14 @@ border:2px solid rgba(255,255,255,.15);
 .brand-logo{
 width:320px;
 max-width:90%;
-margin-bottom:5px;
 display:block;
-margin-left:auto;
-margin-right:auto;
+margin:0 auto 15px;
+animation:logoReveal 1.4s ease;
+filter:
+drop-shadow(0 0 15px rgba(255,255,255,.12))
+drop-shadow(0 0 35px rgba(255,255,255,.05));
 }
+
 
 .tagline{
 color:#8f8f8f;
@@ -65,9 +64,14 @@ letter-spacing:1px;
 display:block;
 text-decoration:none;
 color:white;
+animation:buttonReveal .8s ease forwards;
 
 background:
-rgba(255,255,255,.03);
+linear-gradient(
+180deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.015)
+);
 
 backdrop-filter:blur(10px);
 
@@ -125,20 +129,52 @@ transform:translateY(0);
 }
 }
 
+@keyframes logoReveal{
+from{
+opacity:0;
+transform:translateY(-15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes buttonReveal{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+font-family:'Inter',sans-serif;
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </style></head><body><div class="container"><img src="file_00000000d5a071fbbba457f52dc33af1.png" class="brand-logo" alt="Demure Logo"><div class="tagline">
 the simple.
 </div><a class="btn" href="https://youtube.com/@dllemure">
+<i class="fab fa-youtube"></i>
 YouTube
 </a><a class="btn" href="https://discord.gg/K6ewc7JHVn">
+<i class="fab fa-discord"></i>
 Discord
 </a><a class="btn" href="https://instagram.com/inilliyast">
+<i class="fab fa-instagram"></i>
 Instagram
 </a><a class="btn"
 href="https://tiktok.com/@iniliyast">
+<i class="fab fa-tiktok"></i>
 TikTok
 </a><a class="btn"
 href="https://reymit.ir/iniliyast">
+<i class="fab fa-donation"></i>
 Donation
 </a><div class="footer">
 Demure ©
